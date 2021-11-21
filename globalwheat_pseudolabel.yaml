@@ -1,0 +1,22 @@
+# Global Wheat 2020 dataset http://www.global-wheat.com/
+# Train command: python train.py --data GlobalWheat2020.yaml
+# Default dataset location is next to YOLOv5:
+#   /parent
+#     /datasets/GlobalWheat2020
+#     /yolov5
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: /gdrive/My Drive/Wheat # dataset root dir
+train: # train images (relative to 'path') 3422 images
+  - images/train2
+  - images/test2
+
+val: # val images (relative to 'path') 748 images (WARNING: train set contains ethz_1)
+  - images/valid2
+
+test: # test images (optional) 1276 images
+  - test2
+
+# Classes
+nc: 1 # number of classes
+names: ["wheat_head"] # class names
